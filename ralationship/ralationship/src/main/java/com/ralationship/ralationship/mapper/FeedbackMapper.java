@@ -10,6 +10,7 @@ public class FeedbackMapper {
         dto.setComments(feedback.getComments());
         dto.setDecision(feedback.getDecision());
         dto.setSuggestion_id(feedback.getSuggestion() != null ? feedback.getSuggestion().getId() : feedback.getSuggestion().getId());
+        dto.setAdmin_id(feedback.getAdmin() != null ? feedback.getAdmin().getId() : null);
         return dto;
     }
     public static Feedback toEntity(FeedbackDTO feedbackDTO){
